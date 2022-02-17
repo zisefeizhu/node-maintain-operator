@@ -1,0 +1,6 @@
+domain: node.maintain
+layout:
+- go.kubebuilder.io/v3
+projectName: node-maintain
+repo: github.com/zisefeizhu/node-maintain-operator
+version: "3"
