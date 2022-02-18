@@ -3,4 +3,14 @@ layout:
 - go.kubebuilder.io/v3
 projectName: node-maintain
 repo: github.com/zisefeizhu/node-maintain-operator
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: node.maintain
+  group: batch
+  kind: NodeMaintain
+  path: github.com/zisefeizhu/node-maintain-operator/api/v2alpha1
+  version: v2alpha1
 version: "3"
