@@ -81,6 +81,7 @@ func main() {
 	if err = (&controllers.NodeMaintainReconciler{
 		Client: mgr.GetClient(),
 		Scheme: mgr.GetScheme(),
+		Log:    ctrl.Log.WithName("controllers").WithName("NodeMaintain"),
 	}).SetupWithManager(mgr); err != nil {
 		setupLog.Error(err, "unable to create controller", "controller", "NodeMaintain")
 		os.Exit(1)

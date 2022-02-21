@@ -40,6 +40,7 @@ type NodeMaintainStatus struct {
 
 //+kubebuilder:object:root=true
 //+kubebuilder:subresource:status
+// +kubebuilder:printcolumn:name="Age",type="date",JSONPath=".metadata.creationTimestamp"
 
 // NodeMaintain is the Schema for the nodemaintains API
 type NodeMaintain struct {

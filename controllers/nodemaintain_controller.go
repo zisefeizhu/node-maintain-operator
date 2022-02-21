@@ -18,6 +18,7 @@ package controllers
 
 import (
 	"context"
+	"github.com/go-logr/logr"
 
 	"k8s.io/apimachinery/pkg/runtime"
 	ctrl "sigs.k8s.io/controller-runtime"
@@ -31,6 +32,7 @@ import (
 type NodeMaintainReconciler struct {
 	client.Client
 	Scheme *runtime.Scheme
+	Log    logr.Logger
 }
 
 //+kubebuilder:rbac:groups=batch.node.maintain,resources=nodemaintains,verbs=get;list;watch;create;update;patch;delete
